@@ -87,8 +87,8 @@ module "app" {
   ecs-private-namespace_id = module.cluster.ecs-private-namespace_id
 
   app_name                = "app"
-  app_image               = "nginx:latest"
-  app_port                = 80
+  app_image               = "615929987729.dkr.ecr.us-east-2.amazonaws.com/lab-ecs-test-app:latest"
+  app_port                = 3000
   app_path                = "/"
   app_cpu                 = 256
   app_memory              = 512

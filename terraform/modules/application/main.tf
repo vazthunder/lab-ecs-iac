@@ -148,7 +148,7 @@ resource "aws_ecs_service" "ecs-application" {
 }
 
 resource "aws_alb_target_group" "ecs-application" {
-  name        = var.app_name
+  name_prefix = var.app_name
   port        = var.app_port
   protocol    = "HTTP"
   target_type = "ip"
@@ -166,6 +166,10 @@ resource "aws_alb_target_group" "ecs-application" {
 
   tags = {
     Group = "${var.project}-${var.env}"
+  }
+
+  lifecycle {
+    create_before_destroy = true
   }
 }
 
