@@ -1,0 +1,17 @@
+variable "region"                { type = string }
+variable "project"               { type = string }
+variable "env"                   { type = string }
+variable "private_domain"        { type = string }
+variable "cidr_vpc"              { type = string }
+variable "cidr_private_a"        { type = string }
+variable "cidr_private_b"        { type = string }
+variable "cidr_public_a"         { type = string }
+variable "cidr_public_b"         { type = string }
+variable "bastion_ami_id"        { type = string }
+variable "bastion_instance_type" { type = string }
+variable "bastion_storage_size"  { type = string }
+variable "worker_ec2"            { type = bool }
+variable "worker_instance_type"  { type = string }
+variable "worker_storage_size"   { type = string }
+variable "worker_max_size"       { type = string }
+variable "key_name"              { type = string }

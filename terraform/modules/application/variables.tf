@@ -1,0 +1,22 @@
+variable "project"                  { type = string }
+variable "env"                      { type = string }
+variable "region"                   { type = string }
+variable "cidr_vpc"                 { type = string }
+variable "worker_ec2"               { type = string }
+variable "vpc_id"                   { type = string }
+variable "subnet-private-a_id"      { type = string }
+variable "subnet-private-b_id"      { type = string }
+variable "alb-sg_id"                { type = string }
+variable "alb-listener_arn"         { type = string }
+variable "ecs-cluster_arn"          { type = string }
+variable "ecs-log-group_name"       { type = string }
+variable "ecs-private-namespace_id" { type = string }
+
+variable "app_name"                 { type = string }
+variable "app_image"                { type = string }
+variable "app_port"                 { type = string }
+variable "app_path"                 { type = string }
+variable "app_cpu"                  { type = string }
+variable "app_memory"               { type = string }
+variable "app_desired_count"        { type = string }
+variable "app_health_check_period"  { type = string }

@@ -1,0 +1,17 @@
+[{
+  "name": "${APP_NAME}",
+  "image": "${APP_IMAGE}",
+  "essential": true,
+  "portMappings": [{
+    "containerPort": ${APP_PORT},
+    "hostPort": ${APP_PORT}
+  }],
+  "logConfiguration": {
+    "logDriver": "awslogs",
+    "options": {
+      "awslogs-group": "${LOG_GROUP}",
+      "awslogs-region": "${REGION}",
+      "awslogs-stream-prefix": "${APP_NAME}"
+    }
+  }
+}]
